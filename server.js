@@ -1,9 +1,15 @@
 var express = require("express");
 var count = require("./count");
 var events = require("events");
+var expresslayouts = require("express-ejs-layouts");
 
 var app = express();
+app.use(expresslayouts);
+
 app.set("view engine", "ejs");
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/js', express.static(__dirname + '/js'));
+
 
 var students = {
 
