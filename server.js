@@ -18,6 +18,12 @@ app.get("/", function(req, res) {
 
 });
 
+app.get("/index", function(req, res) {
+
+  res.render("index", { });
+
+});
+
 app.get("/about", function(req, res) {
 
   // res.sendFile(__dirname + "/view/about.html");
